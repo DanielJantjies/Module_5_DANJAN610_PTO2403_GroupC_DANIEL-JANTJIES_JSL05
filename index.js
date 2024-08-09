@@ -10,7 +10,11 @@ const songs = [
     { title: "Ain't No Mountain High Enough", artist: "Marvin Gaye & Tammi Terrell", genre: "R&B" },
     { title: "Come and Get Your Love", artist: "Redbone", genre: "Rock" },
     { title: "I'm Not in Love", artist: "10cc", genre: "Pop" },
-    { title: "Fooled Around and Fell in Love", artist: "Elvin Bishop", genre: "Rock" },
+    { title: "That's How You Feel", artist: "Drake", genre: "Rap" },
+    { title: "We Paid", artist: "Lil Baby", genre: "Rap" },
+    { title: "Too Comfortable", artist: "Future", genre: "Trap" },
+    { title: "I Wish You Roses", artist: "Kali Uchis", genre: "Soul" },
+    { title: "Beauty and a Beast", artist: "Justin Bieber", genre: "Pop" },
     // Feel free to add even more songs
 ];
 
