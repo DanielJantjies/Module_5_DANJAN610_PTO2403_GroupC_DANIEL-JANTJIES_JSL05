@@ -35,13 +35,35 @@ function generatePlaylist(guardians, songs) {
     let playlist = songs.filter(track => track.genre === preferredGenre);
 
     return { guardian, playlist};
-    })
+    });
 
 }
 
+let playlists = generatePlaylist(guardians, songs);
 
+const playlistsDiv = document.getElementById('playlists');
 
-// Call generatePlaylist and display the playlists for each Guardian
-generatePlaylist(guardians, songs);
+playlists.forEach(({ guardian, playlist}) => {
+   const individualPlaylistDiv = document.createElement('div');
+   individualPlaylistDiv.classList.add('playlist');
 
+   const heading = document.createElement('h4');
+   heading.textContent = `${guardian}'s Playlist`;
+   individualPlaylistDiv.appendChild(heading);
+
+playlist.forEach(track => {
+    const songParagraph = document.createElement('p');
+    songParagraph.classList.add('song');
+
+    const songTitleSpan = document.createElement('span');
+    songTitleSpan.classList.add('song-title');
+    songTitleSpan.textContent = track.title;
+    songParagraph.appendChild(songTitleSpan);
+
+    songParagraph.innerHTML += ` by ${track.artist}`;
+    individualPlaylistDiv.appendChild(songParagraph);
+});
+
+playlistsDiv.appendChild(individualPlaylistDiv);
+})
 
